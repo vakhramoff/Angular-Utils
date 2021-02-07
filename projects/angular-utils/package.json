@@ -1,10 +1,11 @@
 {
   "name": "@vakhramoff/angular-utils",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "scripts": {
-    "publish:major": "np major --no-tests --no-release-draft --any-branch --no-2fa",
-    "publish:minor": "np minor --no-tests --no-release-draft --any-branch --no-2fa",
-    "publish:patch": "np patch --no-tests --no-release-draft --any-branch --no-2fa"
+    "build:lib": "ng build angular-utils --prod",
+    "publish:major": "npm version major && npm run build:lib && npm pack && cd ../../dist/angular-utils && npm publish",
+    "publish:minor": "npm version minor && npm run build:lib && npm pack && cd ../../dist/angular-utils && npm publish",
+    "publish:patch": "npm version patch && npm run build:lib && npm pack && cd ../../dist/angular-utils && npm publish"
   },
   "publishConfig": {
     "access": "public"
@@ -15,8 +16,5 @@
   },
   "dependencies": {
     "tslib": "^2.0.0"
-  },
-  "devDependencies": {
-    "np": "^7.2.0"
   }
 }

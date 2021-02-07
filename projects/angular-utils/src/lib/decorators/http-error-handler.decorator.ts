@@ -8,8 +8,6 @@ import { catchError } from 'rxjs/operators';
  * @param showAlert=true Show browser alert with error text
  * @description Allows to catch HTTP-request errors in Observables
  *              Shows error in console and in browser alerts
- * @description Позволяет отлавливать ошибки HTTP-запросов в Observable
- *              Выводит их в консоль и алертом.
  */
 export default function HandleHttpErrors(showAlert: boolean = true): MethodDecorator {
   return (target: any, propertyKey: string, descriptor: PropertyDescriptor) => {
