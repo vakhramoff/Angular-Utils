@@ -1,0 +1,22 @@
+{
+  "name": "@vakhramoff/angular-utils",
+  "version": "0.0.1",
+  "scripts": {
+    "publish:major": "np major --no-tests --no-release-draft --any-branch --no-2fa",
+    "publish:minor": "np minor --no-tests --no-release-draft --any-branch --no-2fa",
+    "publish:patch": "np patch --no-tests --no-release-draft --any-branch --no-2fa"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "peerDependencies": {
+    "@angular/common": "^11.1.2",
+    "@angular/core": "^11.1.2"
+  },
+  "dependencies": {
+    "tslib": "^2.0.0"
+  },
+  "devDependencies": {
+    "np": "^7.2.0"
+  }
+}

@@ -118,7 +118,47 @@
           }
         }
       }
+    },
+    "angular-utils": {
+      "projectType": "library",
+      "root": "projects/angular-utils",
+      "sourceRoot": "projects/angular-utils/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "tsConfig": "projects/angular-utils/tsconfig.lib.json",
+            "project": "projects/angular-utils/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/angular-utils/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/angular-utils/src/test.ts",
+            "tsConfig": "projects/angular-utils/tsconfig.spec.json",
+            "karmaConfig": "projects/angular-utils/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "projects/angular-utils/**/*.ts",
+              "projects/angular-utils/**/*.html"
+            ]
+          }
+        }
+      }
     }
   },
-  "defaultProject": "angular-utils-source"
+  "defaultProject": "angular-utils-source",
+  "cli": {
+    "defaultCollection": "@angular-eslint/schematics"
+  }
 }
