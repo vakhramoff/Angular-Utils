@@ -2,6 +2,14 @@
 
 This library contains utils for Angular projects.
 
+How to import it in your project:
+```
+import {
+  EventBusService,
+  HandleHttpErrors
+} from '@vakhramoff/angular-utils';
+```
+
 ## Event Bus (Service)
 
 How to import:

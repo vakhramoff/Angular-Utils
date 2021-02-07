@@ -1,6 +1,6 @@
 {
   "name": "@vakhramoff/angular-utils",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "scripts": {
     "build:lib": "ng build angular-utils --prod",
     "publish:major": "npm version major && npm run build:lib && npm pack && cd ../../dist/angular-utils && npm publish",
