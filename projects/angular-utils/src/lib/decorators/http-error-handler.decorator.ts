@@ -9,7 +9,7 @@ import { catchError } from 'rxjs/operators';
  * @description Allows to catch HTTP-request errors in Observables
  *              Shows error in console and in browser alerts
  */
-export default function HandleHttpErrors(showAlert: boolean = true): MethodDecorator {
+export function HandleHttpErrors(showAlert: boolean = true): MethodDecorator {
   return (target: any, propertyKey: string, descriptor: PropertyDescriptor) => {
     const originalFunction = descriptor.value;
 

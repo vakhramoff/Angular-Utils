@@ -4,6 +4,14 @@ This library contains utils for Angular projects.
 
 ## Event Bus (Service)
 
+How to import:
+```
+import {
+  EventBusService,
+  HandleHttpErrors
+} from '@vakhramoff/angular-utils';
+```
+
 Import service in any component's constructor:
 ```
 constructor(private eventBus: EventBusService) {}
@@ -32,7 +40,7 @@ this.eventBus.on('TEST_MESSAGE').subscribe((payload) => {
 Just decorate your methods which return Observables this way:
 ```
 @HandleHttpErrors()
-public getDara(param: string): Observable<DataContract> {
+public getData(param: string): Observable<DataContract> {
   return this.http.get<DataContract>(`${environment.apiUrl}/data`);
 }
 ```

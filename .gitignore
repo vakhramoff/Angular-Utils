@@ -2,6 +2,7 @@
 
 #angular-utils
 /projects/angular-utils/node_modules/
+/projects/angular-utils/vakhramoff-angular-utils-*.tgz
 
 # compiled output
 /dist
