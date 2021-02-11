@@ -1,6 +1,15 @@
 {
   "name": "@vakhramoff/angular-utils",
-  "version": "0.0.7",
+  "author": {
+    "name": "Sergey Vakhramov",
+    "url": "https://vakhramoff.ru"
+  },
+  "version": "0.0.9",
+  "license": "GPL-3.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vakhramoff/Angular-Utils.git"
+  },
   "scripts": {
     "build:lib": "ng build angular-utils --prod",
     "publish:major": "npm version major && npm run build:lib && npm pack && cd ../../dist/angular-utils && npm publish",

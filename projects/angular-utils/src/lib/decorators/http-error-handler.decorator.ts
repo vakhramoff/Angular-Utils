@@ -19,8 +19,8 @@ export function HandleHttpErrors(showAlert: boolean = true): MethodDecorator {
       if (result instanceof Observable) {
         return result.pipe(
           catchError((error: HttpErrorResponse) => {
-            const errorTitle = 'HTTP Request Error';
-            const errorText = error.error?.ExceptionMessage ?? error.error ?? error.message ?? 'unknown error';
+            const errorTitle = error.status ?? 'HTTP Request Error';
+            const errorText = error.message ?? 'unknown error';
             const errorMessage = `${errorTitle}: ${errorText}`;
 
             if (showAlert) {
