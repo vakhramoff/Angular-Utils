@@ -14,10 +14,7 @@ import {
 
 How to import:
 ```
-import {
-  EventBusService,
-  HandleHttpErrors
-} from '@vakhramoff/angular-utils';
+import { EventBusService } from '@vakhramoff/angular-utils';
 ```
 
 Import service in any component's constructor:
