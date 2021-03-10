@@ -17,12 +17,7 @@
       },
       "rules": {
         "@angular-eslint/directive-selector": [
-          "error",
-          {
-            "type": "attribute",
-            "prefix": "lib",
-            "style": "camelCase"
-          }
+          "off"
         ],
         "@angular-eslint/component-selector": [
           "error",

@@ -11,3 +11,7 @@ export * from './lib/services/event-bus/bus-event.type';
 /** Handle HTTP Errors */
 export * from './lib/decorators/http-error-handler.decorator';
 
+/** DIRECTIVES */
+/** Cursor */
+export * from './lib/directives/cursor/cursor.directive';
+export * from './lib/directives/cursor/cursor.type';
