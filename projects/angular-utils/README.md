@@ -52,3 +52,41 @@ public getData(param: string): Observable<DataContract> {
 The decorator takes one parameter (showAlert) whics is true by default,
 so if you catch any error, it will show a browser alert.
 In addition to that, this Decorator logs error into a console.
+
+
+## Cursor (Directive)
+
+How to import:
+```
+import { AngularUtilsModule } from '@vakhramoff/angular-utils';
+
+@NgModule({
+  // ...
+  imports: [
+    // ...
+    AngularUtilsModule // <- Add main library module to NgModule.imports section
+  ],
+  // ...
+})
+```
+
+### Single-time Usage
+Use in your template:
+```
+<div [cursor]="'pointer'">
+  <!-- ... -->
+</div>
+```
+
+### Variable Binding
+Or bind to some variable from component:
+  - example.component.ts:
+  ```
+  public currentCursor: TCursorType = this.isEnabled ? 'pointer' : 'default';
+  ```
+  - example.component.html:
+  ```
+  <div [cursor]="currentCursor">
+    <!-- ... -->
+  </div>
+  ```
