@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { EventBusService } from './event-bus/event-bus.service';
+import { CursorDirective } from "./directives/cursor/cursor.directive";
 
 
 @NgModule({
-  declarations: [],
+  declarations: [CursorDirective],
   imports: [
     CommonModule
   ],
-  exports: []
+  exports: [CursorDirective]
 })
 export class AngularUtilsModule { }
