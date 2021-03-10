@@ -1,8 +1,14 @@
-import { Directive, ElementRef, Input, OnChanges, SimpleChanges } from '@angular/core';
-import { TCursorType } from "./cursor.type";
+import {
+  Directive,
+  ElementRef,
+  Input,
+  OnChanges,
+  SimpleChanges,
+} from '@angular/core';
+import { TCursorType } from './cursor.type';
 
 @Directive({
-  selector: '[cursor]'
+  selector: '[cursor]',
 })
 export class CursorDirective implements OnChanges {
   @Input() cursor?: TCursorType = 'default';

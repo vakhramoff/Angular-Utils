@@ -13,7 +13,9 @@ export function HandleHttpErrors(showAlert: boolean = true): MethodDecorator {
   return (target: any, propertyKey: string, descriptor: PropertyDescriptor) => {
     const originalFunction = descriptor.value;
 
-    descriptor.value = function decoratedFunction(): Observable<HttpResponse<any> | HttpErrorResponse> {
+    descriptor.value = function decoratedFunction(): Observable<
+      HttpResponse<any> | HttpErrorResponse
+    > {
       const result = originalFunction.apply(this, arguments);
 
       if (result instanceof Observable) {
@@ -30,10 +32,12 @@ export function HandleHttpErrors(showAlert: boolean = true): MethodDecorator {
             console.error('HTTP Error: ', error);
 
             throw error;
-          }),
+          })
         );
       } else {
-        throw new Error(`The @HandleHttpErrors() decorator must be applied only to methods which return Observable!`);
+        throw new Error(
+          `The @HandleHttpErrors() decorator must be applied only to methods which return Observable!`
+        );
       }
     };
   };
