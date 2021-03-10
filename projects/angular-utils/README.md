@@ -79,7 +79,7 @@ Use in your template:
 ```
 
 ### Variable Binding
-Or bind to some variable from component:
+Or bind to some variable from the component:
   - example.component.ts:
   ```
   public currentCursor: TCursorType = this.isEnabled ? 'pointer' : 'default';
