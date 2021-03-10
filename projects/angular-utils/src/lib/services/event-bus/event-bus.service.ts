@@ -16,7 +16,7 @@ export class EventBusService {
   public on<P = any>(type: string): Observable<P> {
     return this.eventBus$.pipe(
       filter((event) => event.type === type),
-      map((event) => event.payload),
+      map((event) => event.payload)
     );
   }
 
