@@ -58,13 +58,17 @@ In addition to that, this Decorator logs error into a console.
 
 How to import:
 ```
-import { AngularUtilsModule } from '@vakhramoff/angular-utils';
+import {
+  DirectivesModule as AngularUtilsDirectivesModule
+} from '@vakhramoff/angular-utils';
 
 @NgModule({
   // ...
   imports: [
     // ...
-    AngularUtilsModule // <- Add main library module to NgModule.imports section
+    AngularUtilsDirectivesModule,
+    // ^ add main library module to NgModule.imports section
+    // ...
   ],
   // ...
 })
