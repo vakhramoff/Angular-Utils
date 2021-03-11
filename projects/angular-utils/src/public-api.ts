@@ -19,3 +19,9 @@ export * from './lib/directives/directives.module';
 export * from './lib/directives/cursor/cursor.directive';
 export * from './lib/directives/cursor/cursor.type';
 
+/** [PIPES] */
+/** --MODULE */
+export * from './lib/pipes/pipes.module';
+
+/** To Locale String */
+export * from './lib/pipes/to-locale-string.pipe';
