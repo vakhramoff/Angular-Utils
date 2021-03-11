@@ -4,12 +4,23 @@
     "name": "Sergey Vakhramov",
     "url": "https://vakhramoff.ru"
   },
-  "version": "0.1.0",
+  "version": "0.1.1",
   "license": "GPL-3.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/vakhramoff/Angular-Utils.git"
   },
+  "keywords": [
+    "Angular",
+    "TypeScript",
+    "Utilities",
+    "AngularUtilities",
+    "AngularUtils",
+    "HTTPErrorHandling",
+    "Decorator",
+    "Service",
+    "Directive"
+  ],
   "scripts": {
     "build:lib": "ng build angular-utils --prod",
     "publish:major": "npm version major && npm run build:lib && npm pack && cd ../../dist/angular-utils && npm publish",

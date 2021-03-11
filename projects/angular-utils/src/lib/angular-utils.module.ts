@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { CursorDirective } from './directives/cursor/cursor.directive';
+import { DirectivesModule } from "./directives/directives.module";
 
 @NgModule({
-  declarations: [CursorDirective],
-  imports: [CommonModule],
-  exports: [CursorDirective],
+  declarations: [],
+  imports: [CommonModule, DirectivesModule],
+  exports: [DirectivesModule],
 })
 export class AngularUtilsModule {}
