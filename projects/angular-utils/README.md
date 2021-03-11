@@ -67,7 +67,7 @@ import {
   imports: [
     // ...
     AngularUtilsDirectivesModule,
-    // ^ add main library module to NgModule.imports section
+    // ^ add DirectivesModule to @NgModule.imports section
     // ...
   ],
   // ...
@@ -94,3 +94,50 @@ Or bind to some variable from the component:
     <!-- ... -->
   </div>
   ```
+
+
+## To Locale String (Pipe)
+
+Transforms given value to string value in the current locale.
+
+How to import:
+```
+import {
+  PipesModule as AngularUtilsPipesModule
+} from '@vakhramoff/angular-utils';
+
+@NgModule({
+  // ...
+  imports: [
+    // ...
+    AngularUtilsPipesModule,
+    // ^ add PipesModule to @NgModule.imports section
+    // ...
+  ],
+  // ...
+})
+```
+
+### Template Usage
+Use in your template:
+```
+<span class="current-date">
+  {{ today | toLocaleString }}
+</span>
+```
+
+### Component Usage
+Use in your component:
+```
+@Component({
+  // ...
+  providers: [ToLocaleStringPipe],
+  // ^ add ToLocaleStringPipe to @Component.providers section
+})
+
+// Inject the Pipe
+constructor(private toLocaleStringPipe: ToLocaleStringPipe) {}
+
+// Use the pipe
+this.toLocaleStringPipe.transform(this.myValue);
+```
