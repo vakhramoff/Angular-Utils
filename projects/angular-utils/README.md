@@ -7,7 +7,7 @@ Type in a console to install:
     ```
     npm i @vakhramoff/angular-utils
     ```
-  - via yarn:
+  - via yarn
     ```
     yarn add @vakhramoff/angular-utils
     ```
