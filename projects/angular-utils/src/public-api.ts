@@ -19,6 +19,9 @@ export * from './lib/directives/directives.module';
 export * from './lib/directives/cursor/cursor.directive';
 export * from './lib/directives/cursor/cursor.type';
 
+/** Debounce Time */
+export * from './lib/directives/debounce-time/debounce-time.directive';
+
 /** [PIPES] */
 /** --MODULE */
 export * from './lib/pipes/pipes.module';
