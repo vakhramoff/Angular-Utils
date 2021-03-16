@@ -109,8 +109,6 @@ Or bind to some variable from the component:
 ### Debounce Time
 Shows the element after the given amount of milliseconds.
 
-*NOTE: Timer restarts on a variable change.*
-
 #### Single-time Usage
 Use in your template:
 ```angular2html
@@ -120,7 +118,10 @@ Use in your template:
 ```
 
 #### Variable Binding
-Or bind to some variable from the component:
+You can bind to some variable from the component.
+
+*NOTE: Timer restarts on a variable change!*
+
 - example.component.ts:
   ```typescript
   public showAfterMilliseconds: number = 5000;
