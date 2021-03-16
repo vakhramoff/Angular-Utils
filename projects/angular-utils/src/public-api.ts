@@ -24,4 +24,4 @@ export * from './lib/directives/cursor/cursor.type';
 export * from './lib/pipes/pipes.module';
 
 /** To Locale String */
-export * from './lib/pipes/to-locale-string.pipe';
+export * from './lib/pipes/to-locale-string/to-locale-string.pipe';
