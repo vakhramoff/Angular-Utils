@@ -3,7 +3,7 @@
 This library contains utils for Angular projects.
 
 How to import it in your project:
-```
+```typescript
 import {
   EventBusService,
   HandleHttpErrors
@@ -13,18 +13,18 @@ import {
 ## Event Bus (Service)
 
 How to import:
-```
+```typescript
 import { EventBusService } from '@vakhramoff/angular-utils';
 ```
 
 Import service in any component's constructor:
-```
+```typescript
 constructor(private eventBus: EventBusService) {}
 ```
 
 ### How to emit
 Emit your message:
-```
+```typescript
 this.eventBus.emit({
   type: 'TEST_MESSAGE',
   payload: ['Test message payload']
@@ -33,7 +33,7 @@ this.eventBus.emit({
 
 ### How to subscribe
 Listen to a specific type of messages in other part of your Angular app:
-```
+```typescript
 this.eventBus.on('TEST_MESSAGE').subscribe((payload) => {
   // do what you want with a payload...
 });
@@ -43,10 +43,14 @@ this.eventBus.on('TEST_MESSAGE').subscribe((payload) => {
 ## HTTP Error Handler (Decorator)
 
 Just decorate your methods which return Observables this way:
-```
-@HandleHttpErrors()
-public getData(param: string): Observable<DataContract> {
-  return this.http.get<DataContract>(`${environment.apiUrl}/data`);
+```typescript
+class DataEndpointService {
+  // ...
+  @HandleHttpErrors()
+  public getData(param: string): Observable<DataContract> {
+    return this.http.get<DataContract>(`${environment.apiUrl}/data`);
+  }
+  // ...
 }
 ```
 The decorator takes one parameter (showAlert) whics is true by default,
@@ -57,7 +61,7 @@ In addition to that, this Decorator logs error into a console.
 ## Cursor (Directive)
 
 How to import:
-```
+```typescript
 import {
   DirectivesModule as AngularUtilsDirectivesModule
 } from '@vakhramoff/angular-utils';
@@ -76,7 +80,7 @@ import {
 
 ### Single-time Usage
 Use in your template:
-```
+```angular2html
 <div [cursor]="'pointer'">
   <!-- ... -->
 </div>
@@ -85,11 +89,11 @@ Use in your template:
 ### Variable Binding
 Or bind to some variable from the component:
   - example.component.ts:
-  ```
+  ```typescript
   public currentCursor: TCursorType = this.isEnabled ? 'pointer' : 'default';
   ```
   - example.component.html:
-  ```
+  ```angular2html
   <div [cursor]="currentCursor">
     <!-- ... -->
   </div>
@@ -101,7 +105,7 @@ Or bind to some variable from the component:
 Transforms given value to string value in the current locale.
 
 How to import:
-```
+```typescript
 import {
   PipesModule as AngularUtilsPipesModule
 } from '@vakhramoff/angular-utils';
@@ -120,7 +124,7 @@ import {
 
 ### Template Usage
 Use in your template:
-```
+```angular2html
 <span class="current-date">
   {{ today | toLocaleString }}
 </span>
@@ -128,7 +132,7 @@ Use in your template:
 
 ### Component Usage
 Use in your component:
-```
+```typescript
 @Component({
   // ...
   providers: [ToLocaleStringPipe],
