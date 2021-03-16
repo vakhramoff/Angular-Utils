@@ -11,9 +11,9 @@ import { TCursorType } from './cursor.type';
   selector: '[cursor]',
 })
 export class CursorDirective implements OnChanges {
-  @Input() cursor?: TCursorType = 'default';
+  @Input() cursor?: TCursorType = 'auto';
 
-  constructor(private elRef: ElementRef) {
+  constructor(private elementRef: ElementRef) {
     this._setCursor(this.cursor);
   }
 
@@ -24,6 +24,6 @@ export class CursorDirective implements OnChanges {
   }
 
   private _setCursor(cursor: TCursorType) {
-    this.elRef.nativeElement.style.cursor = cursor;
+    this.elementRef.nativeElement.style.cursor = cursor;
   }
 }
