@@ -2,15 +2,19 @@
 
 This library contains utils for Angular projects.
 
-How to import it in your project:
-```typescript
-import {
-  EventBusService,
-  HandleHttpErrors
-} from '@vakhramoff/angular-utils';
-```
+Type in a console to install:
+  - via npm
+    ```
+    npm i @vakhramoff/angular-utils
+    ```
+  - via yarn:
+    ```
+    yarn add @vakhramoff/angular-utils
+    ```
 
-## Event Bus (Service)
+## Services
+
+### Event Bus
 
 How to import:
 ```typescript
@@ -22,7 +26,7 @@ Import service in any component's constructor:
 constructor(private eventBus: EventBusService) {}
 ```
 
-### How to emit
+#### How to emit
 Emit your message:
 ```typescript
 this.eventBus.emit({
@@ -31,7 +35,7 @@ this.eventBus.emit({
 });
 ```
 
-### How to subscribe
+#### How to subscribe
 Listen to a specific type of messages in other part of your Angular app:
 ```typescript
 this.eventBus.on('TEST_MESSAGE').subscribe((payload) => {
@@ -39,8 +43,9 @@ this.eventBus.on('TEST_MESSAGE').subscribe((payload) => {
 });
 ```
 
+## Decorators
 
-## HTTP Error Handler (Decorator)
+### HTTP Error Handler
 
 Just decorate your methods which return Observables this way:
 ```typescript
@@ -57,8 +62,7 @@ The decorator takes one parameter (showAlert) whics is true by default,
 so if you catch any error, it will show a browser alert.
 In addition to that, this Decorator logs error into a console.
 
-
-## Cursor (Directive)
+## Directives
 
 How to import:
 ```typescript
@@ -78,7 +82,9 @@ import {
 })
 ```
 
-### Single-time Usage
+### Cursor
+
+#### Single-time Usage
 Use in your template:
 ```angular2html
 <div [cursor]="'pointer'">
@@ -86,22 +92,47 @@ Use in your template:
 </div>
 ```
 
-### Variable Binding
+#### Variable Binding
 Or bind to some variable from the component:
-  - example.component.ts:
+- example.component.ts:
   ```typescript
   public currentCursor: TCursorType = this.isEnabled ? 'pointer' : 'default';
   ```
-  - example.component.html:
+- example.component.html:
   ```angular2html
   <div [cursor]="currentCursor">
     <!-- ... -->
   </div>
   ```
 
+### Debounce Time
 
-## To Locale String (Pipe)
+#### Single-time Usage
+Use in your template:
+```angular2html
+<div *debounceTime="1000">
+  <!-- ... -->
+</div>
+```
 
+#### Variable Binding
+Or bind to some variable from the component:
+- example.component.ts:
+  ```typescript
+  public showAfterMilliseconds: number = 5000;
+  ```
+- example.component.html:
+  ```angular2html
+  <div *debounceTime="showAfterMilliseconds">
+    <!-- ... -->
+  </div>
+  ```
+  
+*Timer restarts on variable change.*
+
+## Pipes
+
+### To Locale String
 Transforms given value to string value in the current locale.
 
 How to import:
@@ -122,7 +153,7 @@ import {
 })
 ```
 
-### Template Usage
+#### Template Usage
 Use in your template:
 ```angular2html
 <span class="current-date">
@@ -130,7 +161,7 @@ Use in your template:
 </span>
 ```
 
-### Component Usage
+#### Component Usage
 Use in your component:
 ```typescript
 @Component({
