@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { ToLocaleStringPipe } from './to-locale-string.pipe';
+import { ToLocaleStringPipe } from './to-locale-string/to-locale-string.pipe';
 
 @NgModule({
   declarations: [ToLocaleStringPipe],
