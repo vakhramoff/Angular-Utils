@@ -83,6 +83,7 @@ import {
 ```
 
 ### Cursor
+Changes the cursor style on the element.
 
 #### Single-time Usage
 Use in your template:
@@ -106,6 +107,9 @@ Or bind to some variable from the component:
   ```
 
 ### Debounce Time
+Shows the element after the given amount of milliseconds.
+
+*NOTE: Timer restarts on a variable change.*
 
 #### Single-time Usage
 Use in your template:
@@ -127,13 +131,8 @@ Or bind to some variable from the component:
     <!-- ... -->
   </div>
   ```
-  
-*Timer restarts on variable change.*
 
 ## Pipes
-
-### To Locale String
-Transforms given value to string value in the current locale.
 
 How to import:
 ```typescript
@@ -152,6 +151,9 @@ import {
   // ...
 })
 ```
+
+### To Locale String
+Transforms given value to a string value in the current locale.
 
 #### Template Usage
 Use in your template:
