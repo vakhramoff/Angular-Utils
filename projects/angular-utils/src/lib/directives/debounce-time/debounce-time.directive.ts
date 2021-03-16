@@ -22,7 +22,6 @@ export class DebounceTimeDirective implements OnChanges, OnDestroy {
   ) {}
 
   ngOnChanges(changes: SimpleChanges) {
-    console.log(changes);
     if ('debounceTime' in changes) {
       this._clearTimer();
       this._createTimer(this.debounceTime);
