@@ -1,5 +1,7 @@
 # Angular Utils
 
+---
+
 This library contains utils for Angular projects.
 
 Type in a console to install:
@@ -11,6 +13,8 @@ Type in a console to install:
     ```
     yarn add @vakhramoff/angular-utils
     ```
+
+---
 
 ## Services
 
@@ -43,6 +47,8 @@ this.eventBus.on('TEST_MESSAGE').subscribe((payload) => {
 });
 ```
 
+---
+
 ## Decorators
 
 ### HTTP Error Handler
@@ -61,6 +67,8 @@ class DataEndpointService {
 The decorator takes one parameter (showAlert) whics is true by default,
 so if you catch any error, it will show a browser alert.
 In addition to that, this Decorator logs error into a console.
+
+---
 
 ## Directives
 
@@ -132,6 +140,8 @@ You can bind to some variable from the component.
     <!-- ... -->
   </div>
   ```
+
+---
 
 ## Pipes
 
