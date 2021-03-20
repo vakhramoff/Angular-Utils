@@ -5,14 +5,11 @@
 This library contains utils for Angular projects.
 
 Type in a console to install:
-  - via npm
-    ```
-    npm i @vakhramoff/angular-utils
-    ```
-  - via yarn
-    ```
-    yarn add @vakhramoff/angular-utils
-    ```
+```
+npm i @vakhramoff/angular-utils
+// in case of yarn
+yarn add @vakhramoff/angular-utils
+```
 
 ---
 
@@ -188,4 +185,57 @@ constructor(private toLocaleStringPipe: ToLocaleStringPipe) {}
 
 // Use the pipe
 this.toLocaleStringPipe.transform(this.myValue);
+```
+
+---
+
+## Injection Tokens
+
+Tokens that can be used in a DI Provider.
+
+> For detailed explanation see the official documentation about an [InjectionToken](https://angular.io/api/core/InjectionToken).
+> 
+> It's also useful to read about [Dependency Injection](https://angular.io/guide/dependency-injection) and [Dependency Providers](https://angular.io/guide/dependency-injection-providers).
+
+
+### Window
+Provides access to global `window` object.
+
+#### How to use
+Use in your component:
+```typescript
+import { WINDOW } from '@vakhramoff/angular-utils';
+
+// Inject it in a component's constructor
+constructor(@Inject(WINDOW) private readonly window: Window) {
+  // And use :)
+}
+```
+
+### Local Storage
+Provides access to `window.localStorage` object.
+
+#### How to use
+Use in your component:
+```typescript
+import { LOCAL_STORAGE } from '@vakhramoff/angular-utils';
+
+// Inject it in a component's constructor
+constructor(@Inject(LOCAL_STORAGE) private readonly localStorage: Storage) {
+  // And use :)
+}
+```
+
+### Session Storage
+Provides access to `window.sessionStorage` object.
+
+#### How to use
+Use in your component:
+```typescript
+import { SESSION_STORAGE } from '@vakhramoff/angular-utils';
+
+// Inject it in a component's constructor
+constructor(@Inject(SESSION_STORAGE) private readonly sessionStorage: Storage) {
+  // And use :)
+}
 ```
