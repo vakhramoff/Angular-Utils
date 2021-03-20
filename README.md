@@ -7,7 +7,7 @@
 
 ---
 
-> Simple utilities that can help you develop awasome Angular apps.
+> Simple utilities that can help you develop awesome Angular apps.
 
 ## Source
 See [projects/angular-utils](projects/angular-utils) for library source.
