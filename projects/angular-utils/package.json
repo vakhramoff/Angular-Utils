@@ -12,20 +12,25 @@
   },
   "keywords": [
     "Angular",
-    "TypeScript",
     "Utilities",
-    "AngularUtilities",
-    "AngularUtils",
-    "HTTPErrorHandling",
+    "Angular Utilities",
+    "Angular Utils",
+    "TypeScript",
+    "Error Handling",
+    "HTTP Error",
+    "HTTP Error Handling",
     "Decorator",
     "Service",
-    "Directive"
+    "Directive",
+    "Dependency Injection",
+    "Injection Token"
   ],
   "scripts": {
     "build:lib": "ng build angular-utils --prod",
-    "publish:major": "npm version major && npm run build:lib && npm pack && cd ../../dist/angular-utils && npm publish",
-    "publish:minor": "npm version minor && npm run build:lib && npm pack && cd ../../dist/angular-utils && npm publish",
-    "publish:patch": "npm version patch && npm run build:lib && npm pack && cd ../../dist/angular-utils && npm publish"
+    "build:pack": "npm run build:lib && npm pack",
+    "publish:major": "npm version major && npm run build:lib && cd ../../dist/angular-utils && npm publish",
+    "publish:minor": "npm version minor && npm run build:lib && cd ../../dist/angular-utils && npm publish",
+    "publish:patch": "npm version patch && npm run build:lib && cd ../../dist/angular-utils && npm publish"
   },
   "publishConfig": {
     "access": "public"
