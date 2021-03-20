@@ -1,6 +1,6 @@
 # Angular Utils
 
-[![npm version](https://img.shields.io/npm/v/@vakhramoff/angular-utils)](https://www.npmjs.com/package/@vakhramoff/angular-utils)
+[![npm version](https://img.shields.io/npm/v/@vakhramoff/angular-utils?color=green)](https://www.npmjs.com/package/@vakhramoff/angular-utils)
 [![minified size](https://img.shields.io/bundlephobia/min/@vakhramoff/angular-utils)](https://www.npmjs.com/package/@vakhramoff/angular-utils)
 [![minzipped size](https://img.shields.io/bundlephobia/minzip/@vakhramoff/angular-utils)](https://www.npmjs.com/package/@vakhramoff/angular-utils)
 [![license](https://img.shields.io/npm/l/@vakhramoff/angular-utils)](LICENSE)
