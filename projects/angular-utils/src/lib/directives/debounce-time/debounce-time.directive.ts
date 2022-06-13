@@ -10,11 +10,13 @@ import {
 
 @Directive({
   selector: '[debounceTime]',
+  standalone: true,
 })
 export class DebounceTimeDirective implements OnChanges, OnDestroy {
-  @Input() debounceTime = 0;
+  private timeoutId?: number;
 
-  private _timeoutId?: number;
+  @Input()
+  debounceTime = 0;
 
   constructor(
     private templateRef: TemplateRef<any>,
@@ -23,23 +25,23 @@ export class DebounceTimeDirective implements OnChanges, OnDestroy {
 
   ngOnChanges(changes: SimpleChanges) {
     if ('debounceTime' in changes) {
-      this._clearTimer();
-      this._createTimer(this.debounceTime);
+      this.clearTimer();
+      this.createTimer(this.debounceTime);
     }
   }
 
   ngOnDestroy() {
-    this._clearTimer();
+    this.clearTimer();
   }
 
-  private _createTimer(ms: number) {
-    this._timeoutId = setTimeout(() => {
+  private createTimer(ms: number) {
+    this.timeoutId = setTimeout(() => {
       this.viewContainerRef.createEmbeddedView(this.templateRef);
     }, ms);
   }
 
-  private _clearTimer() {
-    clearTimeout(this._timeoutId);
+  private clearTimer() {
+    clearTimeout(this.timeoutId);
     this.viewContainerRef.clear();
   }
 }

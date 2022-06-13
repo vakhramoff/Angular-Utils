@@ -3,9 +3,11 @@ import { TCursorType } from './cursor.type';
 
 @Directive({
   selector: '[cursor]',
+  standalone: true,
 })
 export class CursorDirective {
-  @Input() cursor?: TCursorType = 'auto';
+  @Input()
+  cursor?: TCursorType = 'auto';
 
   @HostBinding('style.cursor')
   get currentCursor() {
